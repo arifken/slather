@@ -168,7 +168,7 @@ module Slather
         dir = Dir[File.join("#{build_directory}", "/**/CodeCoverage")].first
       end
 
-      if dir nil
+      if dir == nil
         # Xcode 9 moved the location of Coverage.profdata
         dir = Dir[File.expand_path("..", "#{build_directory}")].first
       end
